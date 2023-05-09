@@ -1,7 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
+#include <iostream>
+#include <cstdlib>
+#include <cstdbool>
+#include <cstring>
+using namespace std;
 
 void initializing(char board[][26], int n){
   for (int i = 0; i < n; i++)
@@ -20,10 +21,10 @@ void initializing(char board[][26], int n){
 }
 
 void printBoard(char board[][26], int n) {
-  printf("  ");
+  cout << "  ";
   for(int i = 0;i<n;i++)
     printf("%c", 'a' + i);
-  printf("\n");
+  cout << "\n";
   int count = 0;
   for(int j = 0;j<n;j++){
     for(int g = 0;g < n + 2;g++){
@@ -35,7 +36,7 @@ void printBoard(char board[][26], int n) {
         printf("%c", board[j][g-2]);
     }
     count++;
-    printf("\n");
+    cout << "\n";
   }
 }
 
@@ -202,12 +203,12 @@ int makeMove(char board[][26], int n, char turn, int *row, int *col){
 
 int main(){
 	char board[26][26];
-  int n;
+        int n;
 	char computerColor;
-  printf("Enter the board dimension: ");
-  scanf("%d", &n);
-  printf("Computer plays (B/W): ");
-  scanf(" %c", &computerColor);
+  cout << "Enter the board dimension: ";
+  cin >> n;
+  cout << "Computer plays (B/W): ";
+  cin >> computerColor;
   char turn = 'B';
   char humanColor = (computerColor == 'W')?'B':'W';
 	initializing(board, n);
@@ -215,8 +216,8 @@ int main(){
 		printBoard(board, n);
 		char row, col;
 		if (turn == humanColor){
-			printf("Enter move for colour %c (RowCol): ", humanColor);
-      scanf(" %c%c", &row, &col);
+			cout << "Enter move for colour " << humanColor <<" (RowCol): ";
+      cin >> row;cin >> col;
     }
 		else{
       int trow = row - 'a', tcol = col - 'a';
@@ -228,7 +229,7 @@ int main(){
 			turn = (turn == humanColor)?computerColor:humanColor;
 		}
 		else{
-      printf("invalid move. Game over!\n");
+      cout << "invalid move. Game over!" <<endl;
       break;
     }
 	}
