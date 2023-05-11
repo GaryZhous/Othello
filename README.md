@@ -7,3 +7,5 @@ git clone https://github.com/GaryZhous/Othello/tree/main/othello_qt-0.0.1 <your 
 ```
 
 to deploy it on ur computer
+
+<img src="https://github.com/GaryZhous/Othello/blob/main/Othello.png" title="Components" width=50% height=50%>
