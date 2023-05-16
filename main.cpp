@@ -139,7 +139,7 @@ void testMove(char board[][26], int n, int row, int col, char color){
 }
 }
 
-int minimaxValue(char board[][26], int n, char originalTurn, char currentTurn, int depth){
+int minimaxValue(char board[][26], int n, char originalTurn, char currentTurn, int depth, int alpha, int beta){
 	if (depth == 2 || gameOver(board, n))
 		return heuristic(board, n, originalTurn);
 	int moveX[60], moveY[60];
@@ -148,24 +148,24 @@ int minimaxValue(char board[][26], int n, char originalTurn, char currentTurn, i
 
 	getMoveList(board, n, moveX, moveY, &numMoves, currentTurn);
 	if (numMoves == 0)
-		return minimaxValue(board, n, originalTurn, opponent, depth + 1);
+		return minimaxValue(board, n, originalTurn, opponent, depth + 1, alpha, beta);
 	else{
-		int bestMoveVal = -99999;
-		if (originalTurn != currentTurn)
-			bestMoveVal = 99999;
+		int bestMoveVal = (originalTurn == currentTurn) ? -99999 : 99999;
 		for (int i = 0; i < numMoves; i++){
 			char tempBoard[26][26];
 			copyBoard(board, tempBoard, n);
 			testMove(tempBoard, n, moveX[i], moveY[i], currentTurn);
-			int val = minimaxValue(tempBoard, n, originalTurn, opponent, depth + 1);
+			int val = minimaxValue(tempBoard, n, originalTurn, opponent, depth + 1, alpha, beta);
 			if (originalTurn == currentTurn){
-				if (val > bestMoveVal)				
-					bestMoveVal = val;				
+				bestMoveVal = max(bestMoveVal, val);
+				alpha = max(alpha, bestMoveVal);
 			}
 			else{
-				if(val < bestMoveVal)
-					bestMoveVal = val;
+				bestMoveVal = min(bestMoveVal, val);
+				beta = min(beta, bestMoveVal);
 			}
+			if (beta <= alpha)
+				break;
 		}
 		return bestMoveVal;
 	}
@@ -173,7 +173,7 @@ int minimaxValue(char board[][26], int n, char originalTurn, char currentTurn, i
 }
 
 int makeMove(char board[][26], int n, char turn, int *row, int *col){
-  int moveX[60], moveY[60];
+	int moveX[60], moveY[60];
 	int numMoves;
 	char opponent = (turn == 'W')?'B':'W';
 	getMoveList(board, n, moveX, moveY, &numMoves, turn);
@@ -183,23 +183,26 @@ int makeMove(char board[][26], int n, char turn, int *row, int *col){
 	}else{
 		int bestMoveVal = -99999;
 		int bestX = moveX[0], bestY = moveY[0];
+		int alpha = -99999, beta = 99999;
 		for (int i = 0; i < numMoves; i++){
 			char tempBoard[26][26];
 			copyBoard(board, tempBoard, n);
 			testMove(tempBoard, n, moveX[i], moveY[i], turn);
-			int val = minimaxValue(tempBoard, n, turn, opponent, 1);
+			int val = minimaxValue(tempBoard, n, turn, opponent, 1, alpha, beta);
 			if (val > bestMoveVal)
 			{
 				bestMoveVal = val;
 				bestX = moveX[i];
 				bestY = moveY[i];
 			}
+			alpha = max(alpha, bestMoveVal);
 		}
 		*row = bestX;
 		*col = bestY;
 	}
-  return 0;
+	return 0;
 }
+
 
 int main(){
 	char board[26][26];
