@@ -9,4 +9,4 @@ git clone https://github.com/GaryZhous/Othello/tree/main/othello_qt <your projec
 
 to deploy it on ur computer
 
-<img src="https://github.com/GaryZhous/Othello/blob/main/Othello.png" title="Components" width=50% height=50%>
+![](https://github.com/GaryZhous/Othello/blob/main/othello.gif)
