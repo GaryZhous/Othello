@@ -77,11 +77,10 @@ int AI::evaluateBoard(Board *currentBoard)
 
     int numberOfBlackDisks = 0;
     int numberOfWhiteDisks = 0;
-    QVector<Square*> h(8);
-    temp.push_back(h);
+    this->temp = QVector<QVector<Square*>>(8, QVector<Square*>(8, 0));
     for (int x = 0; x < BOARD_SIZE; x++)
         for (int y = 0; y < BOARD_SIZE; y++)
-            temp[x].push_back(currentBoard->getSquare(x,y));
+            temp[x][y] = currentBoard->getSquare(x,y);
 
     Player::Color currentOwner;
     for (int x = 0; x < BOARD_SIZE; x++)
