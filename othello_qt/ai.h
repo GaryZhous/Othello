@@ -10,7 +10,7 @@ public:
     AI(Board *currentBoard);
 
     Square *makeMove(Board *currentBoard);
-    QVector<QVector<Square* > > temp;
+    QVector<QVector<Square* > > temp(8);
 
 private:
     int alphaBeta(Board *board, int depth, int alpha, int beta, bool maximizingPlayer);
