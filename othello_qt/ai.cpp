@@ -80,7 +80,7 @@ int AI::evaluateBoard(Board *currentBoard)
 
     for (int x = 0; x < BOARD_SIZE; x++)
         for (int y = 0; y < BOARD_SIZE; y++)
-            temp[x][y] = currentBoard->getSquare(x,y);
+            temp[x].push_back(currentBoard->getSquare(x,y));
 
     Player::Color currentOwner;
     for (int x = 0; x < BOARD_SIZE; x++)
