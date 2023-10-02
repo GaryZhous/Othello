@@ -140,7 +140,7 @@ void testMove(char board[][26], int n, int row, int col, char color){
 }
 
 int minimaxValue(char board[][26], int n, char originalTurn, char currentTurn, int depth, int alpha, int beta){
-	if (depth == 2 || gameOver(board, n))
+	if (depth == 6 || gameOver(board, n))
 		return heuristic(board, n, originalTurn);
 	int moveX[60], moveY[60];
 	int numMoves;
