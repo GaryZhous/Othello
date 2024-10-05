@@ -13,7 +13,7 @@ To deploy this project on your computer, you can either:
 git clone https://github.com/GaryZhous/Othello <your project file>
 ```
 
-or download the released source codes to deploy this project on ur computer once you have Qt Designer installed!
+or download the released source code and build the project after installing Qt Designer
 ## Content
 ### main.cpp
 This file contains the terminal-based version of the Othello game, which you can play directly from the command line without a UI.
