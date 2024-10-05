@@ -9,6 +9,6 @@ If you are new to QT and you are a student, you can request QT's [educational li
 git clone https://github.com/GaryZhous/Othello/tree/main/othello_qt <your project file>
 ```
 
-to deploy it on ur computer
+to deploy it on ur computer once you have Qt Designer installed!
 
 ![](https://github.com/GaryZhous/Othello/blob/main/othello.gif)
