@@ -9,7 +9,7 @@ If you are new to QT and you are a student, you can request QT's [educational li
 git clone https://github.com/GaryZhous/Othello <your project file>
 ```
 
-or download the released source codes to deploy it on ur computer once you have Qt Designer installed!
+or download the released source codes to deploy this project on ur computer once you have Qt Designer installed!
 ### main.cpp
 the game without UI, but you can play it on your terminal!
 ### othello_qt
