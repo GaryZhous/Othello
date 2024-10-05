@@ -6,7 +6,7 @@ I used Qt with Qmake to embody my codes with a GUI which allows human-human and 
 
 If you are new to QT and you are a student, you can request QT's [educational license](https://www.qt.io/qt-educational-license) here!
 ```sh
-git clone https://github.com/GaryZhous/Othello/tree/main/othello_qt <your project file>
+git clone https://github.com/GaryZhous/Othello <your project file>
 ```
 
 or download the released source codes to deploy it on ur computer once you have Qt Designer installed!
