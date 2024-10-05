@@ -23,4 +23,4 @@ This directory contains the version of the game with a Qt-based GUI. You'll need
 
 ![](https://github.com/GaryZhous/Othello/blob/main/othello.gif)
 
-### Last but not least, if you are interested, feel free to contribute to this project by submitting an issue or pull request! (we can make the UI and game logics even better!)
+#### Last but not least, if you are interested, feel free to contribute to this project by submitting an issue or pull request! (we can make the UI and game logics even better!)
