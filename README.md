@@ -4,7 +4,7 @@ This program once reached #6 on UofT APS105(Computer Fundamentals) lab8 reversi 
 
 I remade this game in C++ using Qt to embody my codes with a GUI which allows human-human and human-computer matches with ab-pruning and some run-time optimization. Now it's faster and more efficient!
 
-#### If you are new to QT and you are a student, you can request QT's [educational license](https://www.qt.io/qt-educational-license) here!
+#### If you are new to Qt and you are a student, you can request Qt's [educational license](https://www.qt.io/qt-educational-license) here!
 ## Deployment
 
 To deploy this project on your computer, you can either:
@@ -22,3 +22,5 @@ This directory contains the version of the game with a Qt-based GUI. You'll need
 
 
 ![](https://github.com/GaryZhous/Othello/blob/main/othello.gif)
+
+### Last but not least, if you are interested, feel free to contribute to this project by submitting an issue or pull request! (we can make the UI and game logics even better!)
