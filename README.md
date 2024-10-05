@@ -5,6 +5,7 @@ This program once reached #6 on UofT APS105(Computer Fundamentals) lab8 reversi 
 I used Qt with Qmake to embody my codes with a GUI which allows human-human and human-computer matches with ab-pruning and some run-time optimization. Now it's faster and more efficient!
 
 #### If you are new to QT and you are a student, you can request QT's [educational license](https://www.qt.io/qt-educational-license) here!
+## Deployment
 
 To deploy this project on your computer, you can either:
 
