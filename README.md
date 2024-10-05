@@ -10,5 +10,9 @@ git clone https://github.com/GaryZhous/Othello <your project file>
 ```
 
 or download the released source codes to deploy it on ur computer once you have Qt Designer installed!
+### main.cpp
+the game without UI, but you can play it on your terminal!
+### othello_qt
+directory of the game with UI, remember to build it in Qt Designer so you can enjoy this game with better visuals!
 
 ![](https://github.com/GaryZhous/Othello/blob/main/othello.gif)
